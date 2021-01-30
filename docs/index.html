@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Wiki Society of the Philippines</title>
+<style>
+html {
+  background: radial-gradient(#fff 20%, #fed);
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+#logo {
+  width: 25vw;
+}
+
+#wordmark {
+  width: 65vw;
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #logo {
+    padding: 10vw 0 5vw;
+    width: 50vw;
+  }
+
+  #wordmark {
+    padding-bottom: 10vw;
+    width: 75vw;
+  }
+}
+</style>
+</head>
+<body>
+<img id="logo" src="logo.svg">
+<img id="wordmark" src="wordmark.svg">
+</body>
+</html>
