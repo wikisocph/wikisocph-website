@@ -2,51 +2,209 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
 <title>Wiki Society of the Philippines</title>
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700%7CMerriweather:400,400i,700,700i" />
 <style>
 html {
-  background: radial-gradient(#fff 20%, #fed);
+  background-image: url(manila-map-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px auto 0;
+  padding: 0;
+  max-width: 900px;
 }
 
 #logo {
-  width: 25vw;
+  width: 25%;
 }
 
 #wordmark {
-  width: 65vw;
+  width: 72%;
 }
 
-@media (max-width: 600px) {
-  body {
-    flex-direction: column;
-    justify-content: center;
-  }
+main {
+  margin: 0 auto 50px;
+  padding: 0;
+  max-width: 900px;
+  font-family: Merriweather;
+}
 
-  #logo {
-    padding: 10vw 0 5vw;
-    width: 50vw;
-  }
+section, footer {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #8768;
+}
 
-  #wordmark {
-    padding-bottom: 10vw;
-    width: 75vw;
-  }
+p {
+  padding-left: 30%;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+a {
+  color: #876;
+}
+
+section p:first-of-type {
+  margin-top: 0;
+}
+
+.hero-intro {
+  margin: 0 0 30px;
+  font-size: 30px;
+  color: #876;
+}
+
+h2 {
+  position: absolute;
+  margin: 0;
+  width: 25%;
+  font-size: 24px;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  color: #666;
+}
+
+#projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-left: 30%;
+}
+
+.project {
+  width: 48%;
+}
+
+.project figure {
+  margin: 0;
+  padding: 0;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project figcaption {
+  margin: 5px 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.project h3 {
+  margin: 15px 0;
+  font-family: Montserrat;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.project p {
+  margin: 15px 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.project .external a {
+  display: block;
+  border-radius: 10px;
+  padding: 8px 15px;
+  font-family: Montserrat;
+  text-decoration: none;
+  background: #fed;
+}
+
+footer {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+  header { margin: 30px 30px 0; }
+  main { margin: 0 30px 30px; }
+  p { font-size: 16px; }
+  .hero-intro { font-size: 25px; }
+  h2 { font-size: 20px; }
+  .project h3 { font-size: 16px; }
+  .project p, footer { font-size: 14px; }
+}
+
+@media screen and (max-width: 800px) {
+  header { flex-direction: column; }
+  #logo { width: 30%; }
+  #wordmark { width: 60%; margin: 20px 0 50px; }
+  p { padding-left: 0; }
+  h2 { position: inherit; margin-bottom: 20px; width: 100%; }
+  #projects { padding-left: 0; }
+}
+
+@media screen and (max-width: 600px) {
+  #logo { width: 40%; }
+  #wordmark { width: 80%; }
+  #projects { display: block; }
+  .project { width: 100%; }
 }
 </style>
 </head>
 <body>
-<img id="logo" src="logo.svg">
-<img id="wordmark" src="wordmark.svg">
+  <header>
+    <img id="logo" src="logo.svg" alt="">
+    <img id="wordmark" src="wordmark.svg" alt="Wiki Society of the Philippines">
+  </header>
+  <main>
+    <p class="hero-intro">Imagine a world in which every Filipino is given free access to the sum of all human knowledge. <em>That is what we are doing.</em></p>
+    <p>The <strong>Wiki Society of the Philippines</strong> or <strong>WikiSocPH</strong> is a group of passionate volunteers who are committed to the democratic creation, distribution and consumption of knowledge. We do this by supporting and promoting <a href="https://wikipedia.org">Wikipedia</a> and its <a href="https://wikimedia.org">sister Wikimedia projects</a> in the Philippines.</p>
+
+    <section>
+      <h2>What we do</h2>
+      <p>Here are some of our ongoing and recent projects:</p>
+      <div id="projects">
+        <div class="project">
+          <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Bantayog_ng_mga_Bayani_Jovito_R_Salonga_Building_Lobby_Alternativity_2.jpg/640px-Bantayog_ng_mga_Bayani_Jovito_R_Salonga_Building_Lobby_Alternativity_2.jpg">
+            <figcaption>© Alternativity / CC BY-SA 4.0</figcaption>
+          </figure>
+          <h3>Wikipedian in Residence at the Bantayog</h3>
+          <p>The <em><a href="https://www.bantayog.org/">Bantayog ng mga Bayani</a></em> is a foundation that maintains a memorial, museum, and library dedicated to remembering and honoring the heroes, martyrs, and victims of the Ferdinand Marcos dictatorship.</p>
+          <p>WikiSocPH partnered with the Bantayog who hired a <em>Wikimedian in Residence</em> (<em>WiR</em>) to help digitize the Bantayog’s library, to improve Wikipedia’s coverage of articles related to the Marcos regime, and to organize Wikimedia events and workshops to the Bantayog's constituency of museum visitors, library researchers, and supporters.</p>
+          <p class="external"><a href="https://outreach.wikimedia.org/wiki/Wikipedian_in_Residence_at_Bantayog_ng_mga_Bayani">Read more about the WiR project</a></p>
+        </div>
+        <div class="project">
+          <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Malabuyoc_Church_01.jpg/640px-Malabuyoc_Church_01.jpg">
+            <figcaption>© Carlo Joseph Moskito / CC BY-SA 4.0</figcaption>
+          </figure>
+          <h3>Encyclopedia of Philippine Heritage</h3>
+          <p>The <em>Encyclopedia of Philippine Heritage</em> aims to document the Philippines’ cultural and natural heritage in Wikipedia, Wikimedia Commons, and Wikidata. We are currently focusing on historical markers issued by the National Historical Commission of the Philippines and the declared cultural and natural heritage sites in the country.</p>
+          <p class="external"><a href="https://wikisocph.github.io/eph-historical-markers-map/">Explore the Historical Markers Map</a></p>
+          <p class="external"><a href="https://wikisocph.github.io/eph-heritage-sites-map/">Explore the Heritage Sites Map</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Work with us</h2>
+      <p>Want to collaborate with us or interested to learn more about Wikipedia and the other Wikimedia projects? Send us an email at wikisocph AT gmail DOT com.</p>
+      <p><em>Disclaimer: WikiSocPH only supports and promotes Wikipedia and the other Wikimedia projects which are maintained by volunteers all over the world and is hosted by the U.S.-based Wikimedia Foundation. WikiSocPH is not responsible for the contents of these projects.</em></p>
+    </section>
+
+    <footer>
+      Copyright © 2021, Wiki Society of the Philippines / <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    </footer>
+  </main>
 </body>
 </html>
