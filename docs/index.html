@@ -44,15 +44,26 @@ main {
 }
 
 section, footer {
-  margin-top: 25px;
-  padding-top: 25px;
+  padding-top: 32px;
   border-top: 1px solid #8768;
 }
 
+section:first-of-type {
+  margin-top: 32px;
+}
+
+section:last-of-type {
+  padding-bottom: 32px;
+}
+
 p {
+  margin: 0;
   padding-left: 30%;
   font-size: 18px;
   line-height: 1.5em;
+}
+p+p {
+  margin-top: 16px;
 }
 
 a {
@@ -79,15 +90,20 @@ h2 {
   color: #666;
 }
 
-#projects {
+.projects {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   padding-left: 30%;
 }
 
+p+.projects {
+  margin-top: 24px;
+}
+
 .project {
   width: 48%;
+  margin-bottom: 32px;
 }
 
 .project figure {
@@ -115,7 +131,7 @@ h2 {
 }
 
 .project p {
-  margin: 15px 0;
+  margin: 12px 0 0;
   padding: 0;
   font-size: 16px;
 }
@@ -149,13 +165,13 @@ footer {
   #wordmark { width: 60%; margin: 20px 0 50px; }
   p { padding-left: 0; }
   h2 { position: inherit; margin-bottom: 20px; width: 100%; }
-  #projects { padding-left: 0; }
+  .projects { padding-left: 0; }
 }
 
 @media screen and (max-width: 600px) {
   #logo { width: 40%; }
   #wordmark { width: 80%; }
-  #projects { display: block; }
+  .projects { display: block; }
   .project { width: 100%; }
 }
 </style>
@@ -172,15 +188,15 @@ footer {
     <section>
       <h2>What we do</h2>
       <p>Here are some of our ongoing and recent projects:</p>
-      <div id="projects">
+      <div class="projects">
         <div class="project">
           <figure>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Bantayog_ng_mga_Bayani_Jovito_R_Salonga_Building_Lobby_Alternativity_2.jpg/640px-Bantayog_ng_mga_Bayani_Jovito_R_Salonga_Building_Lobby_Alternativity_2.jpg">
             <figcaption>© Alternativity / CC BY-SA 4.0</figcaption>
           </figure>
-          <h3>Wikipedian in Residence at the Bantayog</h3>
+          <h3>Wikimedian in Residence at the Bantayog</h3>
           <p>The <em><a href="https://www.bantayog.org/">Bantayog ng mga Bayani</a></em> is a foundation that maintains a memorial, museum, and library dedicated to remembering and honoring the heroes, martyrs, and victims of the Ferdinand Marcos dictatorship.</p>
-          <p>WikiSocPH partnered with the Bantayog who hired a <em>Wikimedian in Residence</em> (<em>WiR</em>) to help digitize the Bantayog’s library, to improve Wikipedia’s coverage of articles related to the Marcos regime, and to organize Wikimedia events and workshops to the Bantayog's constituency of museum visitors, library researchers, and supporters.</p>
+          <p>WikiSocPH partnered with the Bantayog who hired a Wikimedian in Residence (WiR) to help digitize the Bantayog’s library, to improve Wikipedia’s coverage of articles related to the Marcos regime, and to organize Wikimedia events and workshops to the Bantayog’s constituency of museum visitors, library researchers, and supporters.</p>
           <p class="external"><a href="https://outreach.wikimedia.org/wiki/Wikipedian_in_Residence_at_Bantayog_ng_mga_Bayani">Read more about the WiR project</a></p>
         </div>
         <div class="project">
@@ -192,6 +208,50 @@ footer {
           <p>The <em>Encyclopedia of Philippine Heritage</em> aims to document the Philippines’ cultural and natural heritage in Wikipedia, Wikimedia Commons, and Wikidata. We are currently focusing on historical markers issued by the National Historical Commission of the Philippines and the declared cultural and natural heritage sites in the country.</p>
           <p class="external"><a href="https://wikisocph.github.io/eph-historical-markers-map/">Explore the Historical Markers Map</a></p>
           <p class="external"><a href="https://wikisocph.github.io/eph-heritage-sites-map/">Explore the Heritage Sites Map</a></p>
+        </div>
+        <div class="project">
+          <figure>
+            <img src="hrvvmc-editathon.jpg">
+            <figcaption>Photo courtesy of the HRVVMC</figcaption>
+          </figure>
+          <h3>Countering historical negationism and disinformation</h3>
+          <p>Wikipedia is increasingly becoming a battleground for groups who wish to push an agenda and revise the historical record to promote an inauthentic version of events. WikiSocPH aims to counter this by collaborating with like-minded groups and by individually monitoring and revising Wikipedia articles.</p>
+          <p class="external"><a href="https://www.theguardian.com/world/2017/aug/02/wiki-warriors-activists-fighting-to-keep-truth-of-brutal-marcos-regime-in-philippines-alive">Read coverage from <i>The Guardian</i></a></p>
+          <p class="external"><a href="https://newsinfo.inquirer.net/931177/ferdinand-marcos-marcos-martial-law-historical-revisionism-wikipedia-carlos-nazareno-wikipedia-warriors">Read coverage from <i>INQUIRER.net</i></a></p>
+          <p class="external"><a href="https://www.facebook.com/watch/?v=2035630940010128">Watch the feature from CNN Philippines</a></p>
+          <p class="external"><a href="https://thefreedommemorial.ph/latest-releases/the-hrvvmcs-first-martial-law-wikipedia-edit-a-thon/">Read about the first Martial Law Edit-a-thon</a></p>
+        </div>
+        <div class="project">
+          <figure>
+            <img src="wikipedia-20.png">
+            <figcaption>Wikimedia Foundation / CC0</figcaption>
+          </figure>
+          <h3>Wikipedia’s 20th Birthday</h3>
+          <p>Wikipedia recently celebrated its 20th birthday on January 15, 2021. To mark this occasion, long-time Wikipedian Eugene Alvin Villar was invited to talk about Wikipedia on <i><a href="https://techsabado.com/">Tech Sabado</a></i>, an online weekly tech radio show hosted by two veteran journalists in the Philippines.</p>
+          <p class="external"><a href="https://youtu.be/9NKnR6NB-dg">Watch the interview (segment starts at the 41st minute</a></p>
+        </div>      </div>
+    </section>
+
+    <section>
+      <h2>Our networks</h2>
+      <div class="projects">
+        <div class="project">
+          <figure>
+            <img src="eseap-logo.png">
+            <figcaption>© Exec8 / CC BY-SA 4.0</figcaption>
+          </figure>
+          <h3>Wikimedia ESEAP</h3>
+          <p>WikiSocPH participates in the wider global community of Wikimedians through the East, Southeast Asia and the Pacific Regional Cooperation or ESEAP for short. We aim to share our experiences and ideas and to find collaboration opportunities with other Wikimedians in the region.</p>
+          <p class="external"><a href="https://meta.wikimedia.org/wiki/ESEAP_Hub">View the ESEAP Hub</a></p>
+        </div>
+        <div class="project">
+          <figure>
+            <img src="ph-tech-community.jpg">
+            <figcaption>Photo courtesy of the PWDO</figcaption>
+          </figure>
+          <h3>Philippine Tech Community</h3>
+          <p>WikiSocPH is a member of the Philippine Tech Community which provides a platform for local tech groups to discuss issues around community growth, management, expanding linkages, and promoting collaboration among different organizations.</p>
+          <p class="external"><a href="https://www.phtechcommunity.org/">Visit the PH Tech Community website</a></p>
         </div>
       </div>
     </section>
