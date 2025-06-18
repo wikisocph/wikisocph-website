@@ -7,10 +7,12 @@
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700%7CMerriweather:400,400i,700,700i" />
 <style>
+
 html {
   background-image: url(manila-map-bg.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  background-attachment: fixed;
 }
 
 body {
@@ -68,6 +70,11 @@ p+p {
 
 a {
   color: #876;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #c96;
 }
 
 section p:first-of-type {
@@ -142,7 +149,12 @@ p+.projects {
   padding: 8px 15px;
   font-family: Montserrat;
   text-decoration: none;
-  background: #fed;
+  background-color: #fc93;
+  transition: background-color 0.3s ease;
+}
+
+.project .external a:hover {
+  background-color: #ffe8d8;
 }
 
 footer {
@@ -198,6 +210,7 @@ footer {
   .projects { display: block; }
   .project { width: 100%; }
 }
+
 </style>
 </head>
 <body>
